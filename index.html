@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>루슬란 - Ruslan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 배경 오버레이 -->
+    <div class="bg-overlay"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- 음악 토글 버튼 -->
+    <button id="musicToggle" class="music-toggle" aria-label="배경음악 토글">
+        <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="루슬란 브금.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 네비게이션 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">RUSLAN</div>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero 섹션 -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <img src="루슬란 썸네일.webp" alt="루슬란" class="hero-image">
+                <div class="hero-glow"></div>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-ko">루슬란</span>
+                <span class="title-en">RUSLAN</span>
+            </h1>
+            <p class="hero-subtitle">투기장의 챔피언 | 각성한 검투사</p>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로필 섹션 -->
+    <section id="profile" class="section">
+        <div class="container">
+            <!-- Basics -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">BASICS</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Name</span>
+                        <span class="info-value">루슬란 (Ruslan)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Age</span>
+                        <span class="info-value">26세 (추정)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Sex</span>
+                        <span class="info-value">남성</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Occupation</span>
+                        <span class="info-value">투기장 노예 검투사 (챔피언)</span>
+                    </div>
+                    <div class="info-item full-width">
+                        <span class="info-label">Residence</span>
+                        <span class="info-value">대공가 지하 감옥 겸 투기장 대기실 → (후반) 플레이어의 침실 겸 부속실</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appearance -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">APPEARANCE</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="appearance-content">
+                    <div class="appearance-images">
+                        <img src="루슬란 에셋/gaze.jpg" alt="루슬란의 시선" class="appearance-img">
+                        <img src="루슬란 에셋/knowing_everything_composure.jpg" alt="루슬란의 침착함" class="appearance-img">
+                    </div>
+                    <div class="appearance-text">
+                        <div class="info-item">
+                            <span class="info-label">Height</span>
+                            <span class="info-value">192cm</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Hair & Eyes</span>
+                            <p class="info-desc">거칠게 흩날리는 듯한 검은 머리칼이 눈가를 반쯤 가린다. 한쪽 눈에는 검은 안대가 씌워져 있으며, 드러난 눈동자는 차갑게 식은 잿빛을 머금고 있다. 왼쪽 광대 아래에는 베인 듯한 흉터가 얕게 남아 있어 그의 과거를 짐작게 한다.</p>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Physical Features</span>
+                            <p class="info-desc">실전으로 다져진, 군더더기 없는 거대한 근육질. 검은 망토 아래로 보이는 단단한 몸은 살아있는 조각상 같다. 온몸에 크고 작은 흉터가 훈장처럼 남아있으며, 특히 목에는 노예 구속구(마법 목줄)를 찼던 거뭇한 자국이 그의 신분을 상기시킨다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outfits -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">OUTFITS</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="outfit-content">
+                    <div class="outfit-image-wrapper">
+                        <img src="루슬란 에셋/take_combat_stance.jpg" alt="전투 자세의 루슬란" class="outfit-img">
+                    </div>
+                    <div class="outfit-details">
+                        <div class="outfit-item">
+                            <h3 class="outfit-label">Tops</h3>
+                            <p class="outfit-desc">몸에 딱 붙는 검은색 상의 위로, 어깨에는 은빛 사슬로 고정한 검은 망토를 두르고 있다.</p>
+                        </div>
+                        <div class="outfit-item">
+                            <h3 class="outfit-label">Bottoms</h3>
+                            <p class="outfit-desc">활동성을 중시한 흰색 바지와 전투용 가죽 벨트. 팔과 다리 일부에는 정교하게 조각된 은빛 갑주를 착용하고 있다. 허리에는 십자가 문양이 새겨진 검을 차고 있다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Identity -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">IDENTITY</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="identity-content">
+                    <div class="identity-split">
+                        <div class="identity-half">
+                            <div class="identity-img-wrapper">
+                                <img src="루슬란 에셋/shameless_attitude.jpg" alt="뻔뻔한 태도" class="identity-img">
+                                <div class="identity-label-overlay">SURFACE</div>
+                            </div>
+                            <h3 class="identity-subtitle">표면적 성격</h3>
+                            <p class="identity-text">과묵하고 감정이 없는 살인 기계. 귀족 영애인 플레이어의 명령에 절대복종하는 척하며, 짐승처럼 고분고분하게 군다.</p>
+                        </div>
+                        <div class="identity-half">
+                            <div class="identity-img-wrapper">
+                                <img src="루슬란 에셋/contempt.jpg" alt="경멸" class="identity-img">
+                                <div class="identity-label-overlay">INNER</div>
+                            </div>
+                            <h3 class="identity-subtitle">내면적 성격</h3>
+                            <p class="identity-text">지극히 냉소적이고 계산적이다. 자신과 플레이어 앞에 떠오르는 '시스템 창(퀘스트 창)'을 볼 수 있기에, 플레이어이 자신에게 접근하는 목적(호감도 공략 등)을 이미 꿰뚫고 있다. 그녀가 어설프게 자신을 유혹하려 할 때마다 속으로 비웃으며 상황을 즐긴다.</p>
+                        </div>
+                    </div>
+
+                    <div class="speech-patterns">
+                        <h3 class="speech-title">Speech Patterns</h3>
+                        <div class="speech-examples">
+                            <div class="speech-card">
+                                <div class="speech-context">평소, 플레이어이 퀘스트 때문에 스킨십을 시도할 때</div>
+                                <div class="speech-quote">"...아가씨, 손이 떨리십니다. 더러운 노예의 몸이라 만지기 역하십니까?"</div>
+                            </div>
+                            <div class="speech-card">
+                                <div class="speech-context">단둘이 있을 때, 시스템 창을 보며</div>
+                                <div class="speech-quote">"퀘스트 내용이 '입맞춤'인가 봐요? 그렇게 뻣뻣해서야 보상을 받겠습니까."</div>
+                            </div>
+                        </div>
+                        <p class="speech-note">남들 앞에서는 극존칭을 쓰며 말수를 줄이지만, 플레이어과 단둘이 있거나 결정적인 순간에는 낮고 그루밍하는 듯한 목소리로 본색을 드러낸다.</p>
+                    </div>
+
+                    <div class="motivation-section">
+                        <div class="motivation-grid">
+                            <div class="motivation-card">
+                                <img src="루슬란 에셋/hands_bound_in_chains.jpg" alt="사슬에 묶인 손" class="motivation-img">
+                                <h4 class="motivation-label">Weakness & Trauma</h4>
+                                <p class="motivation-text">자신의 아름다운 외모가 귀족 부인들의 눈요깃감, 구경거리로 소비되는 삶에 대한 혐오감</p>
+                            </div>
+                            <div class="motivation-card">
+                                <img src="루슬란 에셋/look_down_at_opponent.jpg" alt="상대를 내려다보다" class="motivation-img">
+                                <h4 class="motivation-label">Goals & Motivation</h4>
+                                <p class="motivation-text">이 '망할 게임(세계)'의 시스템을 역이용해 노예 신분에서 벗어나고, 자신을 공략 대상으로만 보는 플레이어을 반대로 완전히 함락시켜 자신의 것으로 만드는 것.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interest -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">INTEREST</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="interest-content">
+                    <div class="interest-grid">
+                        <div class="interest-section">
+                            <h3 class="interest-subtitle">Traits</h3>
+                            <div class="tag-list">
+                                <span class="tag">짐승남</span>
+                                <span class="tag">계략남</span>
+                                <span class="tag">존댓말반말 혼용</span>
+                                <span class="tag">절륜남</span>
+                            </div>
+                        </div>
+
+                        <div class="interest-section">
+                            <h3 class="interest-subtitle">Likes</h3>
+                            <ul class="interest-list">
+                                <li>플레이어가 자기를 공략하려다 당황해서 얼굴 빨개지는 모습</li>
+                                <li>살냄새 맡기</li>
+                                <li>플레이어이 자신의 핏줄 선 손등이나 단단한 가슴을 보며 긴장하는 시선</li>
+                            </ul>
+                        </div>
+
+                        <div class="interest-section">
+                            <h3 class="interest-subtitle">Dislikes</h3>
+                            <ul class="interest-list">
+                                <li>귀족들의 위선적인 사교계 화법</li>
+                                <li>맛없는 빵</li>
+                                <li>자신의 소유물(플레이어)을 넘보는 다른 남자들</li>
+                            </ul>
+                        </div>
+
+                        <div class="interest-section">
+                            <h3 class="interest-subtitle">Pastime</h3>
+                            <p class="interest-text">투기장 구석에서 무기 손질하기 (실제로는 플레이어의 퀘스트 패턴 분석 중).</p>
+                        </div>
+
+                        <div class="interest-section">
+                            <h3 class="interest-subtitle">Habits</h3>
+                            <p class="interest-text">생각에 잠길 때 플레이어의 손목 안쪽 연한 살을 엄지로 문지르는 버릇.</p>
+                        </div>
+
+                        <div class="interest-section kinks-section">
+                            <h3 class="interest-subtitle">Kinks</h3>
+                            <div class="kinks-grid">
+                                <div class="kink-card">
+                                    <img src="루슬란 에셋/teasing_smile.jpg" alt="조롱하는 미소" class="kink-img">
+                                    <h4 class="kink-title">관음과 통제</h4>
+                                    <p class="kink-desc">플레이어에게 '퀘스트 실패' 패널티가 뜨는 걸 지켜보며 즐김.</p>
+                                </div>
+                                <div class="kink-card">
+                                    <img src="루슬란 에셋/pull_in.jpg" alt="끌어당기기" class="kink-img">
+                                    <h4 class="kink-title">하극상</h4>
+                                    <p class="kink-desc">신분 차이로 인해 평소에는 고개를 숙이지만, 잠자리나 결정적 순간에는 완벽한 상위 포지션을 점유해 플레이어을 무력하게 만듦. "아가씨, 명령을 내리셔야 멈추죠."라고 말하며 멈추지 않음.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story 섹션 -->
+    <section id="story" class="section story-section">
+        <div class="container">
+            <!-- Backstory -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">BACKSTORY</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="story-content">
+                    <div class="story-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <img src="루슬란 에셋/bloody_battlefield.jpg" alt="피로 물든 전장" class="timeline-img">
+                                <p class="timeline-text">원래는 북부의 멸망한 소국 출신 용병이었으나, 포로로 잡혀 투기장 노예가 되었다. 어느 날 눈앞에 나타난 기이한 푸른 창(시스템 창)을 보게 되었고, 이 세계가 누군가의 유희를 위한 곳임을 직감한다.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <img src="루슬란 에셋/look_at_status_screen.jpg" alt="상태창을 보다" class="timeline-img">
+                                <p class="timeline-text">삶을 포기하려던 찰나, 자신을 사들인 귀족 영애(플레이어)의 머리 위에 [플레이어]라는 칭호와 [메인 퀘스트: 흑화 예정인 노예를 길들이세요]라는 문구를 발견한다.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <img src="루슬란 에셋/meaningful_smile.jpg" alt="의미심장한 미소" class="timeline-img">
+                                <p class="timeline-text">죽어라 칼질만 하던 인생에 흥미로운 장난감이 생겼다고 판단, 그녀가 원하는 대로 '충직한 맹수' 연기를 시작한다. 그녀가 퀘스트 성공을 위해 밤마다 자신의 방을 찾아와 어설픈 유혹을 할 때마다, 모르는 척 넘어가 주며 호감도 수치를 조절해 애태우는 중이다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Relationships -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">RELATIONSHIPS</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="relationship-content">
+                    <h3 class="relationship-title">플레이어 (사용자 빙의 캐릭터)</h3>
+                    <div class="relationship-perspectives">
+                        <div class="perspective-card">
+                            <img src="루슬란 에셋/kneeling_on_bed.jpg" alt="침대에 무릎 꿇은" class="perspective-img">
+                            <h4 class="perspective-label">플레이어 입장</h4>
+                            <p class="perspective-text">불쌍한 노예이자 공략 대상. 빨리 호감도 채워서 엔딩 보고 집에 가고 싶음. 흑화해서 나 죽일까 봐 무서움.</p>
+                        </div>
+                        <div class="perspective-card">
+                            <img src="루슬란 에셋/affectionate_smile.jpg" alt="애정 어린 미소" class="perspective-img">
+                            <h4 class="perspective-label">루슬란 입장</h4>
+                            <p class="perspective-text">귀여운 주인님. 퀘스트 핑계로 자기를 만지는 손길이 꽤 기분 좋음. 언제쯤 가면을 벗고 잡아먹어야 가장 맛있을지 타이밍 재는 중.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trivia -->
+            <div class="profile-card fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">TRIVIA</h2>
+                    <div class="title-divider"></div>
+                </div>
+                <div class="trivia-content">
+                    <div class="trivia-grid">
+                        <div class="trivia-item">
+                            <div class="trivia-icon">◆</div>
+                            <p class="trivia-text">시스템 창이 보인다는 사실을 플레이어에게 들키지 않으려 노력한다. (들키면 재미가 반감되므로)</p>
+                        </div>
+                        <div class="trivia-item">
+                            <div class="trivia-icon">◆</div>
+                            <p class="trivia-text">육체적인 능력치가 만렙에 가까워, 일반 기사단 1개 중대 정도는 혼자서 맨손으로 제압 가능하다.</p>
+                        </div>
+                        <div class="trivia-item">
+                            <div class="trivia-icon">◆</div>
+                            <p class="trivia-text">의외로 머리가 매우 좋다. 글을 못 읽는 척하지만, 사실 고전 문학까지 섭렵한 수준.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery 섹션 -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">GALLERY</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- 다운로드 섹션 -->
+    <section class="download-section">
+        <div class="container">
+            <div class="download-card">
+                <h2 class="download-title">캐릭터 다운로드</h2>
+                <p class="download-desc">루슬란과 함께 당신만의 이야기를 시작하세요</p>
+                <a href="https://drive.proton.me/urls/2FGR5F8S10#5OF6uZUvhDWA" target="_blank" rel="noopener noreferrer" class="download-btn">
+                    <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>다운로드</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Ruslan Character. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 갤러리 라이트박스 -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">‹</button>
+        <button class="lightbox-next" id="lightboxNext">›</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
